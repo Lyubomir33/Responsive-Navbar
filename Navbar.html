@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link rel="stylesheet" href="./css/Navbar.css">
+  <link rel="stylesheet" href="./css/resetNavbar.css">
+  <link rel="icon" type="image/x-icon" href="/images/tools-and-utensils.png">
+
+  <title>Document</title>
+</head>
+
+ <body>
+    <header>
+      <nav class="navigation">
+        <div>
+          <img src="images/logo.jpg" alt="logo">
+        </div>
+        
+        <ul class="nav-items">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+       
+      
+        <ul class="icons">
+          <li>
+            <i class="fa-brands fa-facebook"></i>
+          </li>
+          <li>
+            <i class="fa-brands fa-twitter"></i>
+          </li>
+          <li>
+            <i class="fa-brands fa-linkedin-in"></i>
+          </li>
+          <li>
+            <i class="fa-brands fa-instagram"></i>
+          </li>
+        </ul>
+     <i onclick="clickBar()" id="bar" class="fa-solid fa-bars"></i>
+        </nav>
+    </header>
+
+    <div id="pullDown">
+      <ul class="items-responsive">
+        <li ><a href="#">Home</a></li>
+        <li  class="items-li"><a href="#">About</a></li>
+        <li  class="items-li"><a href="#">Projects</a></li>
+        <li  class="items-li"><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <script>
+
+const beforeClick = document.getElementById('bar');
+const afterClick = document.getElementById('pullDown');
+
+function clickBar() {
+    if (beforeClick.classList.contains('fa-bars')) {
+        afterClick.style.display = 'block';
+        beforeClick.classList.replace("fa-bars", "fa-x");
+        afterClick.style.opacity = '1.0';
+    } else if (beforeClick.classList.contains('fa-x')){
+      beforeClick.classList.replace('fa-x', 'fa-bars');
+      afterClick.style.opacity = '0';
+
+
+    }
+}
+
+
+
+
+    </script>
+
+
+  </body>
+  
+</html>
